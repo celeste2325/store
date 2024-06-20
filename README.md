@@ -4,7 +4,7 @@
 
 This project is a Single Page Application from the architecture setup to the implementation of key features like the shopping cart and product detail views.
 
-##Key features
+## Key features
 - **Shopping Cart**: Add, remove, and update products in the cart.
 - **Product Detail View**: View detailed information about each product.
 - - **'timeAgo' Pipe**: Calculate and display how long ago a product was published using the 'date-fns' library.
