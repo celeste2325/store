@@ -1,5 +1,5 @@
 import {Component, inject, signal} from '@angular/core';
-import {CartServiceTsService} from "../../services/cart.service.ts.service";
+import {CartServiceTsService} from "@shared/services/cart.service.ts.service";
 
 @Component({
   selector: 'app-header',
