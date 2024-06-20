@@ -35,6 +35,3 @@ Usage
   1. Run the application:
      ng serve
   2. Open your browser and visit http://localhost:4200.
-
-
-using Angular 17 and tailwind CSS. Utilize HttpClient to connect with the REST API, custom pipes, JavaScript libraries like date-fns. 
