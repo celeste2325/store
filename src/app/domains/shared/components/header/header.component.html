@@ -16,23 +16,26 @@
       <ul class="flex space-x-6">
         <li>
           <a
+            [routerLinkActiveOptions]="{exact:true}"
             aria-current="page"
-            class="block underline hover:underline"
-            href="#"
+            class="block hover:underline"
+            routerLink="/"
+            routerLinkActive="underline"
           >Home</a
           >
         </li>
         <li>
           <a
             class="block hover:underline"
-            href="#"
+            routerLink="/about"
+            routerLinkActive="underline"
           >About</a
           >
         </li>
         <li>
           <a
             class="block hover:underline"
-            href="#"
+            routerLink="/services"
           >Services</a
           >
         </li>

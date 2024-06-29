@@ -4,13 +4,15 @@ import {Product} from "@shared/models/product.model"
 import {HeaderComponent} from "@shared/components/header/header.component";
 import {CartServiceTsService} from "@shared/services/cart.service.ts.service";
 import {ProductService} from "@shared/services/product.service";
+import {LayoutComponent} from "@shared/components/layout/layout.component";
 
 @Component({
   selector: 'app-list',
   standalone: true,
   imports: [
     ProductComponent,
-    HeaderComponent
+    HeaderComponent,
+    LayoutComponent
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
