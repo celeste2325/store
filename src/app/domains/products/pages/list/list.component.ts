@@ -2,7 +2,7 @@ import {Component, inject, signal} from '@angular/core';
 import {ProductComponent} from "@products/components/product/product.component";
 import {Product} from "@shared/models/product.model"
 import {HeaderComponent} from "@shared/components/header/header.component";
-import {CartServiceTsService} from "@shared/services/cart.service.ts.service";
+import {CartService} from "@shared/services/cart.service";
 import {ProductService} from "@shared/services/product.service";
 import {LayoutComponent} from "@shared/components/layout/layout.component";
 
@@ -20,7 +20,7 @@ import {LayoutComponent} from "@shared/components/layout/layout.component";
 export class ListComponent {
 
   products = signal<Product[]>([]);
-  private cartService = inject(CartServiceTsService);
+  private cartService = inject(CartService);
   private productService = inject(ProductService)
 
   ngOnInit() {

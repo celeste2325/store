@@ -4,7 +4,7 @@ import {Product} from "../models/product.model";
 @Injectable({
   providedIn: 'root'
 })
-export class CartServiceTsService {
+export class CartService {
 
   cart = signal<Product[]>([]);
   total = computed(() => {

@@ -1,5 +1,5 @@
 import {Component, inject, signal} from '@angular/core';
-import {CartServiceTsService} from "@shared/services/cart.service.ts.service";
+import {CartService} from "@shared/services/cart.service";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @Component({
@@ -14,7 +14,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 })
 export class HeaderComponent {
   hideSideMenu = signal(true);
-  private cartService = inject(CartServiceTsService);
+  private cartService = inject(CartService);
   cart = this.cartService.cart;
   total = this.cartService.total;
 
