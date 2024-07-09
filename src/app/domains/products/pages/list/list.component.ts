@@ -1,4 +1,4 @@
-import {Component, inject, Input, signal} from '@angular/core';
+import {Component, HostListener, inject, Input, signal} from '@angular/core';
 import {ProductComponent} from "@products/components/product/product.component";
 import {Product} from "@shared/models/product.model"
 import {HeaderComponent} from "@shared/components/header/header.component";
@@ -8,6 +8,7 @@ import {LayoutComponent} from "@shared/components/layout/layout.component";
 import {CategoryService} from "@shared/services/category.service";
 import {Category} from "@shared/models/category";
 import {RouterLink} from "@angular/router";
+
 
 @Component({
   selector: 'app-list',
@@ -25,6 +26,7 @@ export default class ListComponent {
 
   products = signal<Product[]>([]);
   categories = signal<Category[]>([])
+  isDropdownOpen = signal(false);
   @Input() categoryId?: string;
   private cartService = inject(CartService);
   private productService = inject(ProductService)
@@ -40,6 +42,18 @@ export default class ListComponent {
 
   addToCart(product: Product) {
     this.cartService.addToCart(product)
+  }
+
+  toggleDropdown() {
+    this.isDropdownOpen.set(!this.isDropdownOpen());
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('#options-menu') && !target.closest('.origin-top-right')) {
+      this.isDropdownOpen.set(false);
+    }
   }
 
   private getProducts() {
