@@ -69,8 +69,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/store/"
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
