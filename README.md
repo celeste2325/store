@@ -4,35 +4,40 @@
 
 This project is a Single Page Application from the architecture setup to the implementation of key features like the shopping cart and product detail views.
 
+You can view the live application [store](https://celeste2325.github.io/store/).
+
 ## Key features
 
-- **Shopping Cart**: Add, remove, and update products in the cart.
+- **Shopping Cart**: Add and calculate the total of products in the cart.
 - **Product Detail View**: View detailed information about each product.
--
-  - **'timeAgo' Pipe**: Calculate and display how long ago a product was published using the 'date-fns' library.
+- **'timeAgo' Pipe**: Calculate and display how long ago a product was published using the 'date-fns' library.
+- **Filter products by category**
+- **API Integration**:
+  - List all products.
+  - Filter products by category.
+  - Retrieve all product categories.
+## API Documentation
+
+For detailed information about the API endpoints, please refer to the [API Documentation](https://fakeapi.platzi.com/).
 
 ## Technology Stack
 
-- **Frontend Framework**: Angular 17
-- **CSS Framework**: Tailwind CSS
+- **Frontend Framework**: [Angular 17](https://v17.angular.io/docs)
+- **CSS Framework**: [Tailwind CSS](https://tailwindcss.com/docs/guides/angular)
 - **HTTP Client**: HttpClient (Angular)
 - **Date Calculation Library**: date-fns (JavaScript)
-- **Other**: Custom pipes for enhanced functionality
+- **Other**: 
+  - Custom pipes for enhanced functionality.
+  - Lazy loading and code splitting to improve app performance.
+  - Deploy Angular app to GitHub Pages
 
 ## Installation
 
-1. Clone the repository:
-   bash
-   git clone https://github.com/celeste2325/store.git
+   ```
+    git clone https://github.com/celeste2325/store.git
+    cd store
+    npm install
+    ng serve
+ ```
 
-2. Navigate to the project directory.
-   cd your-repository
-
-3. Install the dependencies:
-   npm install
-
-Usage
-
-1. Run the application:
-   ng serve
-2. Open your browser and visit http://localhost:4200.
+Open your browser and visit http://localhost:4200.
